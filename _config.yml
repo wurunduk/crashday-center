@@ -78,6 +78,3 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: https://github.com/wurunduk/crashday-mods.git
-  branch: master
