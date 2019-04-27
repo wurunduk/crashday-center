@@ -2,7 +2,7 @@ backend:
   name: github
   repo: wurunduk/crashday-mods
   branch: master # Branch to update (optional; defaults to master)
-  site_domain: wurunduk.github.io
+  site_domain: wurunduk.github.io/crashday-mods
 
 publish_mode: editorial_workflow
 
