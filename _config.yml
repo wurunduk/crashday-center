@@ -5,16 +5,16 @@
 # Site
 title: Crashday mods
 subtitle:
-description:
-keywords:
+description: a page for crashday SDK and mods
+keywords: 
 author: Community
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://wurunduk.github.io/crashday-mods/
-root: /
+url: https://wurunduk.github.io/crashday-mods
+root: /crashday-mods/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -78,4 +78,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/wurunduk/crashday-mods.git
+  branch: master
