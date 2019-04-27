@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: wurunduk/crashday-mods
+  site_domain: admiring-meninsky-f352c3.netlify.com
 
 publish_mode: editorial_workflow
 
