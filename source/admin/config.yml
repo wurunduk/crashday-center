@@ -3,6 +3,8 @@ backend:
   repo: wurunduk/crashday-mods
   branch: master # Branch to update (optional; defaults to master)
   site_domain: admiring-meninsky-f352c3.netlify.com
+  base_url: wurunduk.github.io
+  auth_endpoint: crashday-mods
 
 publish_mode: editorial_workflow
 
