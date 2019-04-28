@@ -9,32 +9,14 @@ media_folder: "source/assets/images" # Folder where user uploaded files should g
 public_folder: "source"
 
 collections:
-  - name: "new_sdk_entry" # Used in routes, e.g., /admin/collections/blog
-    label: "new SDK entry" # Used in the UI
-    folder: "source/_sdk" # The path to the folder where the documents are stored
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Post" # Used in the UI
+    folder: "source/_posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Categories", name: "categories", widget: "list"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "old_sdk_entry" # Used in routes, e.g., /admin/collections/blog
-    label: "old SDK entry" # Used in the UI
-    folder: "source/_old_sdk" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "news_article"
-    label: "news article"
-    folder: "source/_news"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string", default: "we did something"}
-      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", required: true, widget: "datetime"}
+      - {label: "Edited Date", name: "updated", required: true, widget: "datetime"}
+      - {label: "Categories", name: "category", required: true, widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
