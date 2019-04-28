@@ -3,6 +3,8 @@ backend:
   repo: wurunduk/crashday-mods
   branch: master
   site_domain: crashday-mods.netlify.com
+  base_url: https://github.com
+  auth_endpoint: login/oauth/authorize
 
 publish_mode: editorial_workflow
 
