@@ -2,7 +2,6 @@ backend:
   name: github
   repo: wurunduk/crashday-center
   branch: master
-  site_domain: crashday-mods.netlify.com
 
 publish_mode: editorial_workflow
 
