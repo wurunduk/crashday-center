@@ -4,7 +4,7 @@ date: 2019-04-29T19:00:29.610Z
 updated: 2019-04-29T19:00:29.718Z
 category:
   - old sdk
-  - extra
+  - Misc
 ---
 ## old sdk tools
 
