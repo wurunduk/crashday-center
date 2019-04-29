@@ -6,7 +6,7 @@ category:
   - old sdk
   - Overview
 ---
-![Crashday directory tree](/source/assets/images/cd_folder_structure.gif "Crashday directory tree")
+![Crashday directory tree](/images/cd_folder_structure.gif "Crashday directory tree")
 
 This is a short overview on all the modding-relevant folders.
 
