@@ -12,19 +12,13 @@ category:
 
 _These tools might not work with current CD:RE release and should be only used as references._
 
-
-
 ## blender export plugin
 
 [github page](https://github.com/wurunduk/blender-p3d-import-export)
 
-## 
-
 ## 3d map editor
 
 [github page](https://github.com/wurunduk/crashday-map-editor)
-
-
 
 ## 3d map editor by FlyX
 
