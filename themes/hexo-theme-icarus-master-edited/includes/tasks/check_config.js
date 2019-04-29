@@ -18,7 +18,6 @@ if (!fs.existsSync(CONFIG_PATH)) {
     logger.warn(`${relativePath} is not found. We are creating one for you...`);
     fs.writeFileSync(CONFIG_PATH, new ConfigGenerator(rootSpec).generate());
     logger.info(`${relativePath} is created. Please restart Hexo to apply changes.`);
-    logger.info(`${process.cwd()}`);
     process.exit(0);
 }
 
