@@ -5,7 +5,7 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "source/assets/images" # Folder where user uploaded files should go
+media_folder: "source/images" # Folder where user uploaded files should go
 public_folder: "source"
 
 collections:
