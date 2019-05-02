@@ -9,7 +9,7 @@ category:
 ---
 CD:RE tools are distributes through steam. To download the tools head to steam, right click _LIBRARY_ and select tools. From there locate _Crashday Redline SDK_ and download it. The SDK will be downloaded to your crashday folder installation and put into the folder tools. 
 
-![Tools overview](/source/tools_overview.png "Tools overview")
+![Tools overview](/source/images/tools_overview.png "Tools overview")
 
 * cdtrkhmap
   * Using this tool you can extract the heightmap of the track.
