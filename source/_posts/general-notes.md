@@ -4,7 +4,7 @@ date: 2019-05-02T16:27:04.538Z
 updated: 2019-05-02T16:27:04.654Z
 toc: true
 category:
-  - 'CD:RE sdk'
+  - 'CD:RE SDK'
   - Overview
 ---
 *  All distance units in Crashday are measured in meters, i.e. 1 unit is representing 1 meter. 
