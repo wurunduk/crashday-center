@@ -3,7 +3,7 @@ title: File Types
 date: 2019-04-29T19:19:25.739Z
 updated: 2019-04-29T19:19:25.752Z
 category:
-  - old sdk
+  - Original SDK
   - Overview
 ---
 ## **Crashday File Types**
