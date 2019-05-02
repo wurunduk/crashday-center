@@ -2,8 +2,9 @@
 title: Useful links
 date: 2019-04-29T19:00:29.610Z
 updated: 2019-04-29T19:00:29.718Z
+toc: true
 category:
-  - old sdk
+  - 'CD:RE SDK'
   - Misc
 ---
 ## old sdk tools
@@ -22,4 +23,6 @@ _These tools might not work with current CD:RE release and should be only used a
 
 ## 3d map editor by FlyX
 
-[github page](https://github.com/hobbitinisengard/crashday-3d-editor) [steam guide](https://steamcommunity.com/sharedfiles/filedetails/?id=1605899251)
+[github page](https://github.com/hobbitinisengard/crashday-3d-editor) 
+
+[steam guide](https://steamcommunity.com/sharedfiles/filedetails/?id=1605899251)
