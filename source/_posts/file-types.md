@@ -19,6 +19,10 @@ CD uses a dot to represent decimal numbers e.g.  `1.23`
 
 Colors are represented as RGB, channels are separated with a space e.g. `255 255 255` is white color.
 
+Center of gravity:
+Positive coordinates = right up forward
+Negative coordinates = left down back
+
 # Text based files
 
 ## .amb Ambience
@@ -115,7 +119,7 @@ Shop lists are used to display what can be bought in the shop. There are three m
 Every .lst files consists of a first line and then any amount of entry blocks separated by an empty line.
 
 ```
-Crashday-ShopDataList #defines a start of an .lst file
+Crashday-ShopDataList # defines a start of an .lst file
 ```
 
 an example of an entry block:
@@ -171,8 +175,8 @@ path: `found in the same folder as any texture you use. Has the same name as the
 These files define how textures are rendered in game.
 
 ```
-has_alpha                #defines if the texture has opaque places. If it does not, comment out that line or leave it blank. !The line still should be there!
-# disable_mipmapping     #enable or disable mipmaps?
+has_alpha                # defines if the texture has opaque places. If it does not, comment out that line or leave it blank. !The line still should be there!
+# disable_mipmapping     # enable or disable mipmaps?
 default			 # ingame material type. Options: default, grass, tree, standard or STANDARD. If you choose standard, the file ends here.
 diffuseenvmap            # shader type
 0.3			 # minimum reflection
@@ -185,9 +189,11 @@ There are multiple possible shader types. Each of them defines how the following
 ```
 default        # simple diffuse lighting (default shading type)
 ```
+
 ```
 additiveblend  # additively blended textures
 ```
+
 ```
 specularvertex # diffuse lighting with specular reflection map
 ultra          # minimum graphics quality to activate shader(if user has lower setting, diffuse will be used) Possible options: "ultra", "high", "medium" or "low"
@@ -196,19 +202,37 @@ _self_         # specular map file. _self_ to use alpha channel of the texture, 
 2              # specular power exponent
 0.9            # diffuse sun light strength
 ```
+
 ```
 diffuseenvmap  # diffuse lighting with environment mapping
 0.3            # minimum reflection strength
 0.7            # maximum reflection strength
 3              # fresnel exponent
 ```
+
 ```
 chrome         # chrome shader(great job explaining what it actually is)
 1              # amount of chrome blended against diffuse
 ```
+
 ```
 use_shaderparams_from # reference to other .tex file to pick shader specified there
 [filename].tex        # tex file we copy the shader settings from
 ```
 
 > These were taken from the old sdk, but looking at the reversed Crashday source code, these were also found: diffuse(possibly one parameter, should be the same as default), specularmapping(first variable is graphics setting, then something else?), alphatest, alphatestdoubleside, alphadoubleside
+
+## .cdo Dynamic object file
+
+path: `content/dynamics/`
+
+These files are used to define properties of dynamic objects (places through editor and generally can be moved)
+```
+Crashday-DynamicObject-File # defines a start of an .cdo file
+barrier3a.p3d      # unknown if used, better keep the same as the next line
+barrier3a.p3d      # filename of the 3d model
+METAL 		   # material. Options: CARMETAL, METAL, STONE, WOOD, PLASTIC, RUBBER, EXPLOSIVE
+20		   # mass in KG. use -1 to make object immovable
+0                  # UNUSED? Become movable after that amount of force applied
+0 0 0              # center of mass
+```
