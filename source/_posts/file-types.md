@@ -71,8 +71,6 @@ ambience/day.wav        # environment sound in sounds folder
 0                	# [optional] force music off (useful when hacking envsound with a soundtrack)
 ```
 
-
-
 ## ladder.lst
 
 path: `content/career/ladder.lst`
@@ -105,3 +103,57 @@ Ryan|Whitney final
 Tyreece|Moore final
 \1THE|INCUBATOR lastmission
 ```
+
+## .lst shopping list
+
+Shop lists are used to display what can be bought in the shop. There are three main lists: 
+
+* `content/shop/cars/`**`carname`**`/` items will show up for the given car. In these files you want to specify vinyls, car perf upgrades etc.
+* `content/shop/cars/`**`weapons.lst`**is a list of available weapons in game and will show up for every car under weapons category. Usually you don't need to edit this, unless you want to change some weapon's shop stat.
+* `content/shop/` items will show up for all cars. Generally the only thing you want there are wheels
+
+Every .lst files consists of a first line and then any amount of entry blocks separated by an empty line.
+
+```
+Crashday-ShopDataList #defines a start of an .lst file
+```
+
+an example of an entry block:
+
+```
+Next:  #---------------------------------------------
+crsh1			# identifier name
+crashpower		# group (car, fbumper, rbumper, sidekit, hood, rwing, wheels, performance, weapon, skin, cassis, armour, crashpower)
+NONE			# parent object (e.g. car folder) or NONE
+$ID trkdata/cars/apachee/shop.lst apachee.Name		# Article name (English)
+DEPRECATED         	# UNUSED article description (English)
+withrespect 1370	# availability condition
+0			# UNUSED show media _before_ available
+NONE		        # UNUSED Media showed when available (can be NONE)
+152000			# cost to buy in shop
+NONE	        	# UNUSED shop picture
+0			# Is this a stock car part?
+0       # !!! VERY IMPORTANT !!! - Is mod content? This must be set to 1 if you are creating additional items for the shop.
+```
+
+In every block, if the .lst file was loaded in the car folder you can use _\*`currentcar*`_ text. When the game process the file it will automatically replace it with the cars identifier.
+
+There are three possible availability conditions
+
+* **withrespect \[number]** This item will unlock after **number** amount of respect is gained.
+* **aftercarbought** This item will be unlocked when you buy a car. Can only be used for items with specified parent object.
+* **always** This item will by always unlocked.
+
+> nowhere it is specified what car is used, so i guess the parent object is used for 
+>
+> **aftercarbought**
+>
+>  
+>
+> condition.
+>
+>  
+>
+> ****
+>
+> But seeing how its named parent object originally and not car parent, makes me think we could define another item or something else as parent? Stackable objects or smth?
