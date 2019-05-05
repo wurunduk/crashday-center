@@ -23,11 +23,13 @@ Colors are represented as RGB, channels are separated with a space e.g. `255 255
 
 ## .amb Ambience
 
+path: `content/ambience/`
+
 Ambience files are used by the game to change weather. In general it is a way to change how light, reflections and sounds work in the level.
 Here is a cleaned up version of CD's `day.amb`
 
 ```
-PropsFX-Ambience-File   # every amb file has to start with that line
+PropsFX-Ambience-File   # defines a start of an .amb file
 -                       # name of ambience (overwritten by localized data for default ambiences)
 ambience/day		# texture set for the ambience (lut, background, skybox, sun). First part is the folder name inside textures folder, second is the start of the file name the game will look for(day_bg, day_lut etc.)
 219 186 149 		# sun color
@@ -64,9 +66,42 @@ ambience/day.wav        # environment sound in sounds folder
 1.0 1.0 1.0 		# reflections: min/max/fresnel scaling coefficients
 0		        # turn on headlights for cars
 255 255 255		# color tint for the lensflares/coronas in this ambience. 255,255,255 means no tint. 0,0,0 makes flares invisible
-70 78 78		# the color for the bottom of the scene BG background
+70 78 78		# the color for the bottom of the scene background
 0               	# rotational angle to correct the envmapping directions
 0                	# [optional] force music off (useful when hacking envsound with a soundtrack)
 ```
 
-#
+
+
+## ladder.lst
+
+path: `content/career/ladder.lst`
+
+Ladder list defines the names of opponents in career mode. Opponent names in quickplay can be found in translations files.
+
+```
+Crashday-CareerLadder   # defines a start of ladder.lst
+21			# number of opponents
+1                       # Randomize opponent names?
+James|Hamilton amateurs # Name|Surname league
+George|Rush amateurs
+Emmett|Brown amateurs
+Kevin|Hale amateurs
+Donald|Spikes amateurs
+Mia|Tsukamoto amateurs
+Steve|Jarvik amateurs
+Percy|Kay amateurs
+Waldo|Silver professionals
+Isaac|N. professionals
+John|Williams professionals
+Jules|Ash professionals
+Robert|Patch professionals
+Joe|Eastman professionals
+Kanzan|Tsukamoto professionals
+Vincent|Dust final
+Maurice|Kane final
+Lance|Cartwright  final
+Ryan|Whitney final
+Tyreece|Moore final
+\1THE|INCUBATOR lastmission
+```
