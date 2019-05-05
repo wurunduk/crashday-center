@@ -1,0 +1,72 @@
+---
+title: File types
+date: 2019-05-05T13:53:05.597Z
+updated: 2019-05-05T13:53:07.012Z
+toc: true
+category:
+  - 'CD:RE SDK'
+  - Overview
+---
+Crashday has a lot of different files used for different things. Generally there are two types: text and binary ones. Binary files can only be edited using special programs, plugins or the game itself. Text files can be opened with any text editor.
+
+All the text files are based on the same format:
+
+Every line is important. The game will look for a certain variable on a certain line position, so don't add any additional lines etc.
+
+After every line you can add a comment using **\#** symbol. Everything after it on the same line will be ignored by the game.
+
+CD uses a dot to represent decimal numbers e.g.  `1.23`
+
+Colors are represented as RGB, channels are separated with a space e.g. `255 255 255` is white color.
+
+# Text based files
+
+## .amb Ambience
+
+Ambience files are used by the game to change weather. In general it is a way to change how light, reflections and sounds work in the level.
+Here is a cleaned up version of CD's `day.amb`
+
+```
+PropsFX-Ambience-File   # every amb file has to start with that line
+-                       # name of ambience (overwritten by localized data for default ambiences)
+ambience/day		# texture set for the ambience (lut, background, skybox, sun). First part is the folder name inside textures folder, second is the start of the file name the game will look for(day_bg, day_lut etc.)
+219 186 149 		# sun color
+1			# maximum sunlight strength
+2            		# power exponent of sun light
+97 111 131 		# ambience sky color
+45 49 54         	# ambience ground color
+0 0 0                   # absolute ambience minimum
+255 217 175 		# specular reflection color
+170 170 170	        # darker dense vegetation render color (e.g. treetops)
+190 190 190		# brighter vegetation render color (e.g. grass)
+0 -0.6 -0.8 		# sun light vector
+90			# additional rotation of sun vector
+1.0 1.0 1.0 1.0  	# screen gamma
+1			# apply gamma to sky?
+55 55 55 	    	# texture color filter
+0.0		 	# strength of color filter
+0.1			# strength of color filter on car (defines how much the car's color is "greyed out", to not oversaturate)
+use_colormap
+3			# number of ramp points
+0->0 127->128 255->255	# ramp point 1
+0->0 127->128 255->255
+0->0 127->128 255->255
+69 78 91 		# fog color for looking into normal scenery
+0 0.5 		        # fog amount (min,max) looking into normal scenery
+93 103 115 		# fog color for looking into sun haze
+0 0.5			# fog amount (min,max) looking into sun haze
+ambience/day.wav        # environment sound in sounds folder
+0 0.2 0.8		# sunflare vector
+255 228 173		# sunflare color
+300 300 		# sun corona width/height
+5 5 5			# object shadow color
+0.4			# max shadow alpha density
+1.0 1.0 1.0 		# reflections: min/max/fresnel scaling coefficients
+0		        # turn on headlights for cars
+255 255 255		# color tint for the lensflares/coronas in this ambience. 255,255,255 means no tint. 0,0,0 makes flares invisible
+70 78 78		# the color for the bottom of the scene BG background
+0               	# rotational angle to correct the envmapping directions
+0                	# [optional] force music off (useful when hacking envsound with a soundtrack)
+```
+
+#
