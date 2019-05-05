@@ -164,3 +164,51 @@ There are three possible availability conditions
 
 > nowhere it is specified what car is used, so i guess the parent object is used for **aftercarbought** condition. But seeing how its named parent object originally and not car parent, makes me think we could define another item or something else as parent? Stackable objects or smth?
 
+## .tex Texture shader file
+
+path: `found in the same folder as any texture you use. Has the same name as the given texture, but the .tex format.`
+
+These files define how textures are rendered in game.
+
+```
+has_alpha                #defines if the texture has opaque places. If it does not, comment out that line or leave it blank. !The line still should be there!
+# disable_mipmapping     #enable or disable mipmaps?
+default			 # ingame material type. Options: default, grass, tree, standard or STANDARD. If you choose standard, the file ends here.
+diffuseenvmap            # shader type
+0.3			 # minimum reflection
+0.7			 # maximum reflection
+3			 # fresnel exponent
+```
+
+There are multiple possible shader types. Each of them defines how the following lines are read. Next up you will see a list of shader types followed by their used variables.
+
+```
+default        # simple diffuse lighting (default shading type)
+```
+```
+additiveblend  # additively blended textures
+```
+```
+specularvertex # diffuse lighting with specular reflection map
+ultra          # minimum graphics quality to activate shader(if user has lower setting, diffuse will be used) Possible options: "ultra", "high", "medium" or "low"
+_self_         # specular map file. _self_ to use alpha channel of the texture, or name of another texture. e.g. colwhite.tga
+0.7            # specular overall strength
+2              # specular power exponent
+0.9            # diffuse sun light strength
+```
+```
+diffuseenvmap  # diffuse lighting with environment mapping
+0.3            # minimum reflection strength
+0.7            # maximum reflection strength
+3              # fresnel exponent
+```
+```
+chrome         # chrome shader(great job explaining what it actually is)
+1              # amount of chrome blended against diffuse
+```
+```
+use_shaderparams_from # reference to other .tex file to pick shader specified there
+[filename].tex        # tex file we copy the shader settings from
+```
+
+> These were taken from the old sdk, but looking at the reversed Crashday source code, these were also found: diffuse(possibly one parameter, should be the same as default), specularmapping(first variable is graphics setting, then something else?), alphatest, alphatestdoubleside, alphadoubleside
