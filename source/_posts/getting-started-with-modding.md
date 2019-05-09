@@ -34,10 +34,6 @@ Let's change `Physics.Gravity 9.806650` to `Physics.Gravity 3.1415` and save the
 
 Now launch Crashday, select _MODS_ and enable _mode development mode._ 
 
-> If you encounter any bug while testing your mod, or the game takes to long to load, try the 
->
-> _Disable workshop mods_
->
->  option. It will not load any workshop mods, but will still load testing mods.
+> If you encounter any bug while testing your mod, or the game takes to long to load, try the _Disable workshop mods_ option. It will not load any workshop mods, but will still load testing mods.
 
 Now we are ready to play and test the mod! If you did everything correctly, after launching any mode you should have much lower gravity. Congratulations, your first mod is ready!
