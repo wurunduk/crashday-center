@@ -33,13 +33,22 @@ navbar:
         Join us in Discord:
             icon: fab fa-discord
             url: 'https://discord.is/Crashday'
+        Crashday in Steam:
+            icon: fab fa-steam-square
+            url: 'https://www.facebook.com/CrashdayGame/'
+        Crashday on Facebook:
+            icon: fab fa-facebook-f
+            url: 'https://store.steampowered.com/app/508980/Crashday_Redline_Edition/'
+        Crashday on YouTube:
+            icon: fab fa-youtube
+            url: 'https://www.youtube.com/channel/UChNhQlWBzTGGU0zeHMfXTww'
+        Listen to CD OST:
+            icon: fab fa-soundcloud
+            url: 'https://soundcloud.com/user-676465780'
 # Footer section link settings
 footer:
     # Links to be shown on the right of the footer section
     links:
-        Join us in Discord:
-            icon: fab fa-discord
-            url: 'https://discord.is/Crashday'
         Creative Commons:
             icon: fab fa-creative-commons
             url: 'https://creativecommons.org/'
