@@ -156,3 +156,38 @@ Possible causes:
 
 1. Part group specified incorrectly. Check .cdo file definition for possible variants.
 2. The engine expected another value at this line position. This probably means you missed some value or added one extra.
+
+## Error: texture couldn't be found!
+
+Exact message:
+
+```
+Error: texture could't be found!
+textureFile = *texturePath*
+(this message was produced in:
+..\code\game\propcore\texture\cbm.cpp, line 352)
+```
+
+Problematic file: `missing texture`, `carinfo.cca`.
+
+Possible causes:
+
+1. The game looks for the texture which is actually missing. Possibly wrong path or name is used somewhere.
+2. One mesh is listed twice in `carinfo.cca` mesh list.
+
+## Could not allocate Index Slot!
+
+Exact message:
+
+```
+Could not allocate Index Slot!
+(this message was produced in:
+file..\code\game\propcore\object\batch.cpp, line 208)
+```
+
+Problematic file: `.cat`
+
+Possible causes:
+
+1. You forgot a tile name or did not specify the position with auto positioning turned off. Visit file definitions for .cat files for reference.
+2. Possibly other unknown causes.
