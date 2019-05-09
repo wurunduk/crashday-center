@@ -88,13 +88,7 @@ Possible causes:
 
 > you're assuming errors make sense
 >
-> \
->
->
 > that's a rookie mistake
->
-> \
->
 >
 > @Mica
 
