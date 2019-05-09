@@ -27,7 +27,7 @@ navbar:
         #Archives: /archives
         Categories: /categories
         #Tags: /tags
-        About: /about
+        #About: /about
     # Navigation bar links to be shown on the right
     links:
         Join us in Discord:
