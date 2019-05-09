@@ -21,7 +21,7 @@ Colors are represented as RGB, channels are separated with a space e.g. `255 255
 
 # Text based files
 
-## .amb Ambience definition file
+## .amb Ambience definition
 
 path: `content/ambience/`
 
@@ -71,7 +71,7 @@ ambience/day.wav        # environment sound in sounds folder
 0                	# [optional] force music off (useful when hacking envsound with a soundtrack)
 ```
 
-## ladder.lst Career opponent list file
+## ladder.lst Career opponent list
 
 path: `content/career/ladder.lst`
 
@@ -104,7 +104,7 @@ Tyreece|Moore final
 \1THE|INCUBATOR lastmission
 ```
 
-## .lst Shop list file
+## .lst Shop list
 
 Shop lists are used to display what can be bought in the shop. There are three main lists: 
 
@@ -164,7 +164,7 @@ There are three possible availability conditions
 
 > nowhere it is specified what car is used, so i guess the parent object is used for **aftercarbought** condition. But seeing how its named parent object originally and not car parent, makes me think we could define another item or something else as parent? Stackable objects or smth?
 
-## .tex Texture shader file
+## .tex Texture shader
 
 path: `found in the same folder as any texture you use. Has the same name as the given texture, but the .tex format.`
 
@@ -228,13 +228,13 @@ These files define dynamic objects that can be placed on the map. To add an obje
 Crashday-DynamicObject-File	# defines a start of a .cdo file
 arrowright.p3d      		# UNUSED? should be the same as the next line
 arrowright.p3d      		# model used by the object
-METAL	 					# material (Options: CARMETAL, METAL, STONE, WOOD, PLASTIC, RUBBER, EXPLOSIVE)		
-180		 					# mass in kg (-1 makes object immovable)		
-0                			# UNUSED? amount of force needed to rip the object from the ground
-0 -0.2 0         			# center of gravity
+METAL	 			# material (Options: CARMETAL, METAL, STONE, WOOD, PLASTIC, RUBBER, EXPLOSIVE)		
+180		 		# mass in kg(-1 makes object immovable)		
+0                		# UNUSED? amount of force needed to rip the object from the ground
+0 -0.2 0         		# center of gravity
 ```
 
-## .tun Tuning definition file
+## .tun Tuning definition
 
 path: `cars/*carname*/ .tun`
 
@@ -243,7 +243,7 @@ These files has a list of all possible tuning parts which the cars could. If you
 Generally a .tun files starts like this:
 
 ```
-		# Crashday Car Tuning definition file
+	# Crashday Car Tuning definition file
 11      # Num tuning items in the file
         # Empty line
 ```
@@ -296,4 +296,3 @@ Here is a list of possible parameters:
    * `shift_exhaust2x=` Same as previous but for the second exhaust.
    * `p3dmesh1=` Add a mesh to the car. Parameter can end from 1 to 16.
    * `removemesh1=` Remove a mesh from the car. Also ends from 1 to 16. Note that this should be used only to remove non tuning meshes, the ones specified in mesh list in `carinfo.cca`.
-
