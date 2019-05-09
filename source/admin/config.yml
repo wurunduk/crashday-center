@@ -3,10 +3,10 @@ backend:
   repo: wurunduk/crashday-center
   branch: master
 
-publish_mode: editorial_workflow
-
 media_folder: "source/images" # Folder where user uploaded files should go
 public_folder: "source"
+
+show_preview_links: false
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
