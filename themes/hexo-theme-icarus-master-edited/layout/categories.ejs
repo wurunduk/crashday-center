@@ -12,6 +12,19 @@
         if (category.hasOwnProperty('children')) {
             result += '<ul>' + build_list(category.children) + '</ul>';
         }
+        if(category.display_posts) {
+            result += '<ul>'
+            site.categories.findOne({name: category.name}).posts.sort('title', 1).each(function(post) {
+                result += `<li>
+                    <a class="level is-marginless" href="${url_for(post.link ? post.link : post.path)}">
+                        <span class="level-start">
+                            <span class="level-item">${post.title}</span>
+                        </span>
+                    </a>
+                </li>`;
+            });
+            result += '</ul>'
+        }
         return result + '</li>';
     }).join('');
 }

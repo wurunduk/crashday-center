@@ -27,22 +27,28 @@ module.exports = function (hexo) {
 
     hexo.extend.helper.register('_list_categories', function () {
         const $ = cheerio.load(this.list_categories({ depth: 2 }), { decodeEntities: false });
-        function traverse(root) {
+        function traverse(root, list_posts) {
             const categories = [];
             root.find('> .category-list-item').each(function () {
                 const category = {
                     url: $(this).find('> .category-list-link').attr('href'),
                     name: $(this).find('> .category-list-link').text(),
-                    count: $(this).find('> .category-list-count').text()
+                    count: $(this).find('> .category-list-count').text(),
+                    display_posts: false
                 };
+                if(category.name == 'CD:RE SDK') list_posts = true;
                 if ($(this).find('> .category-list-child').length) {
-                    category['children'] = traverse($(this).find('> .category-list-child'));
+                    category['children'] = traverse($(this).find('> .category-list-child'), list_posts);
+                }
+                else
+                {
+                    category['display_posts'] = true;
                 }
                 categories.push(category);
             });
             return categories;
         }
-        return traverse($('.category-list'));
+        return traverse($('.category-list'), false);
     });
 
     hexo.extend.helper.register('_list_tags', function () {
