@@ -2,7 +2,7 @@
 title: General notes
 date: 2019-05-02T16:27:04.538Z
 updated: 2019-05-02T16:27:04.654Z
-toc: true
+toc: false
 category:
   - 'CD:RE SDK'
   - Overview
