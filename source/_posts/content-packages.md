@@ -2,7 +2,7 @@
 title: Content packages
 date: 2019-05-09T17:24:09.617Z
 updated: 2019-05-09T17:24:09.655Z
-toc: true
+toc: false
 category:
   - 'CD:RE SDK'
   - Overview
@@ -27,6 +27,6 @@ For easier distribution CD's content is divided into several packages, each cont
   * f - Turkish
   * g - Portuguese
 
-If you are planning to mod the game, you would generally unpack all useful packages in the same folder(you probably do not need the Music one). This would give you all of CD's unpacked content which can be edited(but not loaded) and used as reference.
+If you are planning to mod the game, you would generally unpack all useful packages in the same folder(you probably do not need the Music one). This would give you all of Crashday's unpacked content which can be edited(but not loaded) and used as reference.
 
 ![unpacked packages overview](/images/folders_overview.png "unpacked packages overview")
