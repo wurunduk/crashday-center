@@ -11,7 +11,7 @@ Modding Crashday is fairly easy in some aspects and incredibly difficult in othe
 
 # Preparing your workspace
 
-To start modding the game we will need some basic setup steps. Firstly, you should download _CD Tools_ from _Steam._ You can find them after you bought the game in _LIBRARY -> TOOLS -> Crashday Redline SDK._ This will download CD tools and put them into `Crashday/tools/` folder. Launching tools from _Steam_ will launch Crashday's workshop upload tool.
+To start modding the game we will need some basic setup steps. Firstly, you should download _Crashday Tools_ from _Steam._ You can find them after you bought the game in _LIBRARY -> TOOLS -> Crashday Redline SDK._ This will download CD tools and put them into `Crashday/tools/` folder. Launching tools from _Steam_ will launch Crashday's workshop upload tool.
 
 After we got the tools, it's a good idea to get reference mod content. If you go into `Crashday/data/` you will find .cpk archives with all of Crashday's data. In here you should unpack needed packages in the same folder, so you will get a content folder. To check what packages you want to unpack, visit [Content Packages](https://crashdaycenter.com/2019/05/09/content-packages/).
 
