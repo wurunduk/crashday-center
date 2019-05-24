@@ -238,7 +238,7 @@ METAL	 			# material (Options: CARMETAL, METAL, STONE, WOOD, PLASTIC, RUBBER, EX
 
 path: `cars/*carname*/ .tun`
 
-These files has a list of all possible tuning parts which the cars could. If you want a part to be purchasable, you alsoo need to define a .lst file for said item.
+These files has a list of all possible tuning parts which the cars could. If you want a part to be purchasable, you also need to define a .lst file for said item.
 
 Generally a .tun files starts like this:
 
@@ -296,3 +296,34 @@ Here is a list of possible parameters:
    * `shift_exhaust2x=` Same as previous but for the second exhaust.
    * `p3dmesh1=` Add a mesh to the car. Parameter can end from 1 to 16.
    * `removemesh1=` Remove a mesh from the car. Also ends from 1 to 16. Note that this should be used only to remove non tuning meshes, the ones specified in mesh list in `carinfo.cca`.
+
+## .cfl Field object definition
+
+path: `/tiles/`
+
+These files are used to add tiles to the game.
+
+```
+Crashday-FieldObject-File
+- 				# tile name (in editor, only used for custom tiles, which don't have a category specified)
+field.p3d       # model used by the tile
+1 1				# tile size (x y). Each can be 1 or 2 only (10 or 20 meters)
+GROUND_FLAT     # UNUSED? can be GROUND_FLAT GROUND_EDGE or GROUND_SIDE
+0               # list the track piece in the editor? If 0 a .cat file will be needed to show the tile in editor
+NONE			# UNKNOWN. NONE or cfl to replace the original when the tile is on slope. Only for 1x1 size tiles
+2.0				# maximum random ground shift
+1               # after recover, can the player spawn on the tile?
+0               # is tile a checkpoint?
+-8.5 10 8.5 16  # REMOVE THIS LINE IF THE PREVIOUS LINE IS 0. top-left and bottom-right coordinates of the checkpoint plane
+1            	# is it possible to freely roam across all tile without hitting anything? If 0 requires a .cai AI file.
+default         # dynamic object dropping height. default = +100 meters. Use negative numbers if you want to put objects into tunnels
+STOP			# horizontal/vertical lines without height smoothing points separated with a space in any order. Possible values: V1, V2, H1, H2, STOP at the end to indicate the end. 
+
+------------------- VEGETATION -------------------
+
+NO_VEGETATION
+```
+
+Crashday allows tiles to be bent using heightmaps in editor. Usually for that, tile models are pre-cut every meter. But sometimes you don't want that, to avoid strange results e.g. misshaped houses on a slope. For that we can use the last parameter in .cfl, to restrain bending on certain axes. Here is an image to explain possible choices.
+
+![Explanation of possible bending restrictions](/images/tile_bending.png "Explanation of possible bending restrictions")
