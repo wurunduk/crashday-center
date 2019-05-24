@@ -305,19 +305,19 @@ These files are used to add tiles to the game.
 
 ```
 Crashday-FieldObject-File
-- 				# tile name (in editor, only used for custom tiles, which don't have a category specified)
+- 		# tile name (in editor, only used for custom tiles, which don't have a category specified)
 field.p3d       # model used by the tile
-1 1				# tile size (x y). Each can be 1 or 2 only (10 or 20 meters)
+1 1		# tile size (x y). Each can be 1 or 2 only (10 or 20 meters)
 GROUND_FLAT     # UNUSED? can be GROUND_FLAT GROUND_EDGE or GROUND_SIDE
 0               # list the track piece in the editor? If 0 a .cat file will be needed to show the tile in editor
-NONE			# UNKNOWN. NONE or cfl to replace the original when the tile is on slope. Only for 1x1 size tiles
-2.0				# maximum random ground shift
+NONE		# UNKNOWN. NONE or cfl to replace the original when the tile is on slope. Only for 1x1 size tiles
+2.0		# maximum random ground shift
 1               # after recover, can the player spawn on the tile?
 0               # is tile a checkpoint?
 -8.5 10 8.5 16  # REMOVE THIS LINE IF THE PREVIOUS LINE IS 0. top-left and bottom-right coordinates of the checkpoint plane
 1            	# is it possible to freely roam across all tile without hitting anything? If 0 requires a .cai AI file.
 default         # dynamic object dropping height. default = +100 meters. Use negative numbers if you want to put objects into tunnels
-STOP			# horizontal/vertical lines without height smoothing points separated with a space in any order. Possible values: V1, V2, H1, H2, STOP at the end to indicate the end. 
+STOP		# bend restriction axes separated with a space in any order. Possible values: V1, V2, H1, H2, STOP at the end to indicate the end. 
 
 ------------------- VEGETATION -------------------
 
