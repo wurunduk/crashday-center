@@ -17,32 +17,30 @@ Brakelight meshes act as the rear brakelights for your car, and appear in all am
 
 The easiest way of making these is to simply make a copy of the front and rear lights of your car, but can be expanded further, shown by this example here:
 
-![](/source/delorean_lights.png "From the Delorean mod")
+![Example of how lights work in-game](/images/delorean_lights.png "Lights example")
 
 Now light flares (or omni lights) are not meshes, but rather light object that you add to the model, these add a special lens flare glow effect to the headlights and brakelights. 
 
 To add them:
 
 * In Blender, they are the standard point lamps, 
-* in Zmodeler, they are the omni lights.
+* in Zmodeler or 3ds max, they are the omni lights.
 
 Side notes:
 
 * Put them slightly in front of the overlay meshes to work properly.
-* In Blender, if using the Blender .p3d exporter, changing the Color and Energy affects the light ingame.
+* In Blender, if using the Blender .p3d exporter, changing the Color and Energy affects the light in-game.
 * You can assign a maximum of 4 flares to an overlay mesh.
 * Not assigning a flare to an overlay mesh by name will add a permanent, always visible flair.
 
 The naming goes as follows:
 
-![](/source/flarestable.png "The Incubator's lights")
-
- 
+![Names of the meshes and related lights](/images/flarestable.png "Names of the meshes and related lights")
 
 The Incubator flares' positions (Highlighted in orange)
 
-![](/source/incuflares.png "In Blender")
+![Example lights positions on Incubator](/images/incuflares.png "Example lights positions on Incubator")
 
 And ingame
 
-![](/source/incuflares2.png "THE INCUBATOR")
+![Light flares in-game](/images/incuflares2.png "Light flares in-game")
