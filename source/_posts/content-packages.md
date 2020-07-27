@@ -17,14 +17,16 @@ For easier distribution CD's content is divided into several packages, each cont
 * `data004.cpk` - Vegetation related files
 * `data005.cpk` - Dynamics related files
 * `data006.cpk` - Tile related files
-* `data007_.cpk` - Translation files ( depends on which language is selected in steam)
+* `data007_.cpk` - Translation files (depends on which language is selected in steam)
   * a - English
   * b - German
   * c - Italian
   * d - Russian
-  * e - Hungarian
-  * f - Turkish
-  * g - Portuguese
+  * e - Turkish
+  * f - Hungarian
+  * g - Brazilian
+  * h - Spanish
+  * i - Polish
 
 If you are planning to mod the game, you would generally unpack all useful packages in the same folder(you probably do not need the Music one). This would give you all of Crashday's unpacked content which can be edited(but not loaded) and used as reference.
 
