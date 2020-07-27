@@ -4,13 +4,14 @@ date: 2019-05-02T16:27:04.538Z
 updated: 2019-05-02T16:46:21.556Z
 toc: false
 category:
-  - 'CD:RE SDK'
-  - Overview
+  - Documentation
 ---
 CD:RE tools are distributes through _Steam_. To download the tools head to _Steam_, right click _LIBRARY_ and select tools. From there locate _Crashday Redline SDK_ and download it. The SDK will be downloaded to your Crashday installation folder and put into the `tools` folder. 
 
-![Tools overview](/images/tools_overview.png "Tools overview")
+![Tools overview](/media/tools_overview.png "Tools overview")
 
+* cdtrkconv2
+  * Using this tool you can extract and insert .dbs settings into tracks!
 * cdtrkhmap
   * Using this tool you can extract the heightmap of the track.
 * cdtrkpic

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>Ambience modding: LUT&#39;s - Crashday Center</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="Crashday now supports color LUT’s (Lookup Table) which allow much easier color management for ambience mods. You can think of a LUT as an actual table. Before rendering any frame, the game will get ev">
+<meta name="keywords" content="Crashday, sdk, tools">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ambience modding: LUT&#39;s">
+<meta property="og:url" content="https://crashdaycenter.com/t/ambience-modding-lut-s/index.html">
+<meta property="og:site_name" content="Crashday Center">
+<meta property="og:description" content="Crashday now supports color LUT’s (Lookup Table) which allow much easier color management for ambience mods. You can think of a LUT as an actual table. Before rendering any frame, the game will get ev">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://crashdaycenter.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-05-09T16:20:17.653Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ambience modding: LUT&#39;s">
+<meta name="twitter:description" content="Crashday now supports color LUT’s (Lookup Table) which allow much easier color management for ambience mods. You can think of a LUT as an actual table. Before rendering any frame, the game will get ev">
+<meta name="twitter:image" content="https://crashdaycenter.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/crashday_icon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139213774-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-139213774-1');
+</script>
+
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/crashday_icon.png" alt="Ambience modding: LUT&#39;s" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Join us in Discord" href="https://discord.is/Crashday">
+                        
+                        <i class="fab fa-discord"></i>
+                        
+                    </a>
+                    
+                    <a class="navbar-item" target="_blank" title="Crashday in Steam" href="https://store.steampowered.com/app/508980/Crashday_Redline_Edition/">
+                        
+                        <i class="fab fa-steam-square"></i>
+                        
+                    </a>
+                    
+                    <a class="navbar-item" target="_blank" title="Crashday on Facebook" href="https://www.facebook.com/CrashdayGame/">
+                        
+                        <i class="fab fa-facebook-f"></i>
+                        
+                    </a>
+                    
+                    <a class="navbar-item" target="_blank" title="Crashday on YouTube" href="https://www.youtube.com/channel/UChNhQlWBzTGGU0zeHMfXTww">
+                        
+                        <i class="fab fa-youtube"></i>
+                        
+                    </a>
+                    
+                    <a class="navbar-item" target="_blank" title="Listen to CD OST" href="https://soundcloud.com/user-676465780">
+                        
+                        <i class="fab fa-soundcloud"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/t/">Tutorials</a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Ambience modding: LUT&#39;s
+            
+        </h1>
+        <div class="content">
+            <p>Crashday now supports color LUT’s (Lookup Table) which allow much easier color management for ambience mods. You can think of a LUT as an actual table. Before rendering any frame, the game will get every pixel, take it’s color as a position of the table. Look at our LUT and change the starting pixel to the pixel in the table. Luckily, a lot of modern painting software let’s us work on LUT’s easily.</p>
+<p>To get started, download the following <a href="https://cdn.discordapp.com/attachments/556249164900466688/570278209430618113/neutral_lut.tga" target="_blank" rel="noopener">neutral color LUT</a> and place it in <code>user/mod_testing/[modname]/content/textures/ambience</code>.</p>
+<p>At this point, we should decide which ambience we want to base our mod off of. I’ll choose the Day ambience, meaning I’ll copy the following files from our previously created reference directory <code>content/textures/ambience</code>:</p>
+<ul>
+<li>day.tex</li>
+<li>day.tga</li>
+<li>day_bd.dds</li>
+<li>day_bg.tex</li>
+<li>day_lut.tex</li>
+<li>day_lut.tga</li>
+<li>dayh.tex</li>
+<li>dayh.tga</li>
+</ul>
+<p>and day.amb from <code>content/ambience</code></p>
+<p>If you want to just slightly adjust the feel of the existing ambience, feel free to open the <code>day_lut.tga</code> with your image editor. But if you want to make new and precise look, replace <code>day_lut.tga</code> with the <code>neutral_lut.tga</code> we downloaded, and open it.</p>
+<p>What you are looking at now, is our color Lookup Table. As you might notice, the image has a resolution of 16x16x16. Wait what? Yes. This is actually a color cube, where each axis represents a basic color channel (red, green and blue). After that the cube was sliced on the blue axis and the slices were stacked to the right. </p>
+<p><img src="/media/color_cube_explanation.png" alt="Color cube sliced explanation" title="Color cube sliced  explanation"></p>
+<p>As stated before, the game looks at the coordinates of the frame’s pixel and takes the color of the lut at given position. This means, that if you were to make this LUT “negative”, all the 3D rendered objects in the game will appear in negative. Feel free to try it if you’d like!</p>
+<p>There are many other things one can do with the LUT, like simulating color blindness (there are mods for that on the Workshop, actually), black and white, sepia effects. </p>
+<p>But also we can make really small and nice looking adjustments now. Firstly, we’re going to need to make some reference images. Start the game with mod_testing enabled and making sure to select the Day ambience we are overwriting, take some screenshots that will make good references. Make sure you capture shadows, various greens, industrial tiles, cars, etc. Also make sure you capture them losslessly, using the print-screen button on your keyboard, or otherwise a program that saves them as <em>PNG</em> or <em>BMP</em> will do just fine.</p>
+<p>Now import the best reference shots into your picture editing project and create an image of all the useful portions of the reference shots. After doing that, I recommend putting the LUT layer in there in the top-let corner, so we can easily grab it later.</p>
+<p>Now we can start adjusting the colors. Using our reference images we’ll be able to tune the colors to get the result we want. Make sure that any color corrections you make are applied to the layer with the LUT!</p>
+<p>Please refrain from using tools or plugins that only affect a limited range. This can quickly cause artifacts that will be noticeable in-game. Brightness, Contrast, Hue, Saturation are all great tools. You can also adjust color curves if you wish.</p>
+<p>Do NOT use things like blur, glow, sharpen and so forth, as the results of those won’t translate to the game. Remember, we are adjusting colors via a color lookup table. That’s all the game is able to read from the LUT.</p>
+<p>When you’re satisfied, go the Canvas Resize the image and Anchor is to the Top-Left. Enter 256 for width and 16 for height. If you put your LUT in the top-left, you’ll end up with only our Color LUT afterwards!</p>
+<p>Now save the LUT over the old <code>day_lut.tga</code> and test your ambience in-game! If you still want to make some adjustments, just undo a few steps until you have your reference images back and adjust some more from there.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/d/">
+            <span class="level-start">
+                <span class="level-item">Documentation</span>
+            </span>
+        </a><ul><li>
+                <a class="level is-marginless" href="/d/content-packages/">
+                    <span class="level-start">
+                        <span class="level-item">Content packages</span>
+                    </span>
+                </a>
+            </li><li>
+                <a class="level is-marginless" href="/d/errors-and-how-to-fix-them/">
+                    <span class="level-start">
+                        <span class="level-item">Errors and how to fix them</span>
+                    </span>
+                </a>
+            </li><li>
+                <a class="level is-marginless" href="/d/file-types/">
+                    <span class="level-start">
+                        <span class="level-item">File types</span>
+                    </span>
+                </a>
+            </li><li>
+                <a class="level is-marginless" href="/d/general-notes/">
+                    <span class="level-start">
+                        <span class="level-item">General notes</span>
+                    </span>
+                </a>
+            </li><li>
+                <a class="level is-marginless" href="/d/launch-parameters/">
+                    <span class="level-start">
+                        <span class="level-item">Launch parameters</span>
+                    </span>
+                </a>
+            </li><li>
+                <a class="level is-marginless" href="/d/shared-textures/">
+                    <span class="level-start">
+                        <span class="level-item">Shared Textures</span>
+                    </span>
+                </a>
+            </li><li>
+                <a class="level is-marginless" href="/d/tools/">
+                    <span class="level-start">
+                        <span class="level-item">Tools</span>
+                    </span>
+                </a>
+            </li><li>
+                <a class="level is-marginless" href="/d/useful-links/">
+                    <span class="level-start">
+                        <span class="level-item">Useful links</span>
+                    </span>
+                </a>
+            </li></ul></li><li>
+        <a class="level is-marginless" href="/categories/t/">
+            <span class="level-start">
+                <span class="level-item">Tutorials</span>
+            </span>
+        </a><ul><li>
+                <a class="level is-marginless" href="/t/ambience-modding-lut-s/">
+                    <span class="level-start">
+                        <span class="level-item">Ambience modding: LUT's</span>
+                    </span>
+                </a>
+            </li><li>
+                <a class="level is-marginless" href="/t/getting-started-with-modding/">
+                    <span class="level-start">
+                        <span class="level-item">Getting started with modding</span>
+                    </span>
+                </a>
+            </li><li>
+                <a class="level is-marginless" href="/t/making-car-lights/">
+                    <span class="level-start">
+                        <span class="level-item">Making car lights</span>
+                    </span>
+                </a>
+            </li><li>
+                <a class="level is-marginless" href="/t/paint-net-tips-and-tricks/">
+                    <span class="level-start">
+                        <span class="level-item">Paint.net tips and tricks</span>
+                    </span>
+                </a>
+            </li><li>
+                <a class="level is-marginless" href="/t/publishing-and-updating-workshop-items/">
+                    <span class="level-start">
+                        <span class="level-item">Publishing and updating workshop items</span>
+                    </span>
+                </a>
+            </li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        
+            
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            
+        </div>
+    </div>
+</div>
+
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            
+        </div>
+    </div>
+</div>
+
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/crashday_icon.png" alt="Ambience modding: LUT&#39;s" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Wurunduk&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

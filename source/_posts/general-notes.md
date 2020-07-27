@@ -4,8 +4,7 @@ date: 2019-05-02T16:27:04.538Z
 updated: 2019-05-02T16:27:04.654Z
 toc: false
 category:
-  - 'CD:RE SDK'
-  - Overview
+  - Documentation
 ---
 * All distance units in Crashday are measured in meters, i.e. 1 unit is representing 1 meter. 
 * The Crashday coordinate system is defined as follows: when looking "into your screen" the X axis goes from left to right (increasing rightwards). The Y axis defines the vertical direction from bottom to top (increasing upwards). The Z axis is the depth extension and points into the screen.

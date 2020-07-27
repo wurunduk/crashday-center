@@ -4,7 +4,7 @@ date: 2020-04-24T09:40:42.599Z
 updated: 2020-04-24T09:40:43.414Z
 toc: true
 category:
-  - "Tips and Tricks: Textures"
+  - Tutorials
 ---
 ### **Introduction**
 
@@ -20,11 +20,11 @@ These can be chosen by clicking *Wrench* icon *(a.k.a. Properties)* on the *Laye
 
 With *Normal* Blend Mode
 
-![](source/multip_layer1.png "On *Normal* Blend Mode")
+![](media/multip_layer1.png "On *Normal* Blend Mode")
 
 With *Multiply* Blend Mode
 
-![](source/multipl_layer2.png "On *Mutiply* Blend Model")
+![](media/multipl_layer2.png "On *Mutiply* Blend Model")
 
 This is very useful sort of 'baking' liverys onto an Ambient Occlusion baked body texture and if you want to replicate how vanilla game liverys look like (as they were probably made this exact way).\
 \

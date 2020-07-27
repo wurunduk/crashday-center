@@ -5,7 +5,7 @@ html {
   font-size: 14px;
 }
 body {
-  background-color: #f7f7f7;
+  background-color: #eae5d9;
 }
 body,
 button,
@@ -55,7 +55,7 @@ textarea {
 }
 .card {
   border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 1px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08), 0 0 1px rgba(0,0,0,0.2);
 }
 .card + .card,
 .card + .column-right-shadow {
@@ -80,7 +80,7 @@ img.thumbnail {
   max-height: 1.75rem;
 }
 .navbar-main {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 .navbar-main .navbar-menu,
 .navbar-main .navbar-start,
@@ -137,6 +137,7 @@ img.thumbnail {
   margin-top: 0;
 }
 .widget .menu-list li ul {
+  border-left: 1px solid #b9b9b9;
   margin-right: 0;
 }
 .widget .menu-list a.level {
@@ -389,7 +390,7 @@ img.thumbnail {
   font-family: "Source Code Pro", monospace, "Microsoft YaHei";
 }
 .content code {
-  color: #ff3860;
+  color: #cc294a;
   background: transparent;
   padding: 0;
 }

@@ -4,8 +4,7 @@ date: 2019-05-24T12:06:24.864Z
 updated: 2019-05-24T12:06:26.588Z
 toc: true
 category:
-  - 'CD:RE SDK'
-  - Misc
+  - Documentation
 ---
 Crashday has multiple launch parameters but sadly none were described by the devs. If you find how any of the parameters behave and it is not written here already, let us know!
 

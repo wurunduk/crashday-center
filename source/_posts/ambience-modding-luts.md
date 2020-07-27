@@ -4,7 +4,6 @@ date: 2019-05-09T19:20:15.970Z
 updated: 2019-05-09T19:20:17.653Z
 toc: true
 category:
-  - 'CD:RE SDK'
   - Tutorials
 ---
 Crashday now supports color LUT's (Lookup Table) which allow much easier color management for ambience mods. You can think of a LUT as an actual table. Before rendering any frame, the game will get every pixel, take it's color as a position of the table. Look at our LUT and change the starting pixel to the pixel in the table. Luckily, a lot of modern painting software let's us work on LUT's easily.
@@ -28,7 +27,7 @@ If you want to just slightly adjust the feel of the existing ambience, feel free
 
 What you are looking at now, is our color Lookup Table. As you might notice, the image has a resolution of 16x16x16. Wait what? Yes. This is actually a color cube, where each axis represents a basic color channel (red, green and blue). After that the cube was sliced on the blue axis and the slices were stacked to the right. 
 
-![Color cube sliced explanation](/images/color_cube_explanation.png "Color cube sliced  explanation")
+![Color cube sliced explanation](/media/color_cube_explanation.png "Color cube sliced  explanation")
 
 As stated before, the game looks at the coordinates of the frame's pixel and takes the color of the lut at given position. This means, that if you were to make this LUT "negative", all the 3D rendered objects in the game will appear in negative. Feel free to try it if you'd like!
 

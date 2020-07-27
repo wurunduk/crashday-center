@@ -3,8 +3,8 @@ backend:
   repo: wurunduk/crashday-center
   branch: master
 
-media_folder: "source/images" # Folder where user uploaded files should go
-public_folder: "source"
+media_folder: "source/media" # Folder where user uploaded files should go
+public_folder: "source/media"
 
 show_preview_links: false
 

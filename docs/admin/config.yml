@@ -3,10 +3,10 @@ backend:
   repo: wurunduk/crashday-center
   branch: master
 
-publish_mode: editorial_workflow
+media_folder: "source/media" # Folder where user uploaded files should go
+public_folder: "source/media"
 
-media_folder: "source/assets/images" # Folder where user uploaded files should go
-public_folder: "source"
+show_preview_links: false
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
@@ -18,5 +18,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", required: true, widget: "datetime"}
       - {label: "Edited Date", name: "updated", required: true, widget: "datetime"}
+      - {label: "Add page navigation", name: "toc", required: false, widget: "boolean", default: true}
       - {label: "Categories", name: "category", required: true, widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}

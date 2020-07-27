@@ -4,8 +4,7 @@ date: 2019-05-05T13:53:05.597Z
 updated: 2019-05-05T13:53:07.012Z
 toc: true
 category:
-  - 'CD:RE SDK'
-  - Overview
+  - Documentation
 ---
 Crashday has a lot of different files used for different things. Generally there are two types: text and binary ones. Binary files can only be edited using special programs, plugins or the game itself. Text files can be opened with any text editor.
 

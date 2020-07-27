@@ -4,8 +4,7 @@ date: 2019-05-09T12:30:14.456Z
 updated: 2019-05-09T12:30:14.560Z
 toc: true
 category:
-  - 'CD:RE SDK'
-  - Misc
+  - Documentation
 ---
 While making mods for Crashday you may encounter a lot of different crashes and bugs. Problem is, the error messages were meant for developers so they don't usually give enough info about how you would fix the given bug. But usually it is possible to pinpoint the problematic file and fix the error. For this purpose here is the list of well-known errors and their possible causes.
 

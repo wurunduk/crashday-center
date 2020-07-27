@@ -36,7 +36,7 @@ module.exports = function (hexo) {
                     count: $(this).find('> .category-list-count').text(),
                     display_posts: false
                 };
-                if(category.name == 'CD:RE SDK') list_posts = true;
+                if(category.name == 'Documentation') list_posts = true;
                 if ($(this).find('> .category-list-child').length) {
                     category['children'] = traverse($(this).find('> .category-list-child'), list_posts);
                 }
@@ -48,7 +48,7 @@ module.exports = function (hexo) {
             });
             return categories;
         }
-        return traverse($('.category-list'), false);
+        return traverse($('.category-list'), true);
     });
 
     hexo.extend.helper.register('_list_tags', function () {

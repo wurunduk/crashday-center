@@ -15,7 +15,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://crashdaycenter.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :category/:post_title/
 permalink_defaults:
 
 # Directory
@@ -55,8 +55,10 @@ index_generator:
   order_by: -date
   
 # Category & Tag
-default_category: uncategorized
+default_category: Documentation
 category_map:
+  Documentation: d
+  Tutorials: t
 tag_map:
 
 # Date / Time format

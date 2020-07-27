@@ -4,7 +4,6 @@ date: 2019-05-09T18:58:51.073Z
 updated: 2019-05-09T18:58:52.417Z
 toc: true
 category:
-  - 'CD:RE SDK'
   - Tutorials
 ---
 So you have got your amazing mod or map ready to share with the rest of the world? Nice, you came to the right place.
