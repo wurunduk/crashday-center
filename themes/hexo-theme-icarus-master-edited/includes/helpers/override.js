@@ -68,10 +68,7 @@ module.exports = function (hexo) {
 
             return categories;
         }
-        m = traverse($('.category-list'), false, 0)
-        console.log("meme")
-        console.log(m)
-        return m;
+        return traverse($('.category-list'), false, 0);
     });
 
     hexo.extend.helper.register('_list_tags', function () {
