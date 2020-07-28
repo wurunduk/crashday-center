@@ -2,7 +2,7 @@
 title: Paint.net tips and tricks
 date: 2020-04-24T09:40:42.599Z
 updated: 2020-04-24T09:40:43.414Z
-toc: true
+toc: false
 category:
   - Tutorials
 ---
@@ -27,5 +27,3 @@ With *Multiply* Blend Mode
 ![](/media/multipl_layer2.png "On *Mutiply* Blend Model")
 
 This is very useful sort of 'baking' liverys onto an Ambient Occlusion baked body texture and if you want to replicate how vanilla game liverys look like (as they were probably made this exact way).
-
-![](/media/beacon.png)
