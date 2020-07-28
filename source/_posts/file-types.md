@@ -325,4 +325,4 @@ NO_VEGETATION
 
 Crashday allows tiles to be bent using heightmaps in editor. Usually for that, tile models are pre-cut every meter. But sometimes you don't want that, to avoid strange results e.g. misshaped houses on a slope. For that we can use the last parameter in .cfl, to restrain bending on certain axes. Here is an image to explain possible choices.
 
-![Explanation of possible bending restrictions](/images/tile_bending.png "Explanation of possible bending restrictions")
+![Explanation of possible bending restrictions](/media/tile_bending.png "Explanation of possible bending restrictions")
