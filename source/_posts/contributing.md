@@ -17,8 +17,8 @@ This site uses markdown for content, here is cheat sheet if you need one: [Githu
 The admin panel also provides a visual editor, so you dont need to edit any markdown if you want.
 
 Here are some rules to use when making articles:
-* "ADD PAGE NAVIGATION" should be enabled only for long articles containing a lot of info. This option adds a \'Catalogue\' panel on the right based on headers
-* \` \` Red highlight should be used for all paths, file names, extensions and to highlight any relevant info
+* "ADD PAGE NAVIGATION" should be enabled only for long articles containing a lot of info. This option adds a 'Catalogue' panel on the right based on headers
+* `` `` Red highlight should be used for all paths, file names, extensions and to highlight any relevant info
 * \> Quote can be used to quote or to highlight an unchecked or unkown information
 * Be sure to correctly categorise a new article. To add an article to _Documentation -> Other_ you would use _"Documentation, Other"_
 * If you want to add a new category, you can do so. But please tell *@wurunduk#0001* so he can fix the ordering in the menus
