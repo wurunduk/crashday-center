@@ -5,6 +5,7 @@ updated: 2019-05-02T16:46:21.556Z
 toc: false
 category:
   - Documentation
+  - Other
 ---
 CD:RE tools are distributes through _Steam_. To download the tools head to _Steam_, right click _LIBRARY_ and select tools. From there locate _Crashday Redline SDK_ and download it. The SDK will be downloaded to your Crashday installation folder and put into the `tools` folder. 
 

@@ -16,8 +16,8 @@ After we got the tools, it's a good idea to get reference mod content. If you go
 
 # Understanding Crashday loading
 
-Firstly to understand how we want to build our mod we will need to take a look at the process of mod loading. In general, it looks like this:\
-At first stage the game takes all the .cpk files from `Crashday/data/` and unpacks them into some imaginary folder (Just like we did). If any of the original files are edited or corrupted at this point, the game will crash on us.\
+Firstly to understand how we want to build our mod we will need to take a look at the process of mod loading. In general, it looks like this:
+At first stage the game takes all the .cpk files from `Crashday/data/` and unpacks them into some imaginary folder (Just like we did). If any of the original files are edited or corrupted at this point, the game will crash on us.
 After that, the game starts to unpack mods from workshop in to the same imaginary folder, in order from top to bottom of our launcher list, overwriting original files if necessary. This way mods can add their own files to the game system, as well as overwrite original ones.
 
 If user has enabled _mod development mode_ in the launcher, our test mods will also be loaded after that. These can be placed as .cpk archives in `Crashday/user/` folder, or as uniquely named folders in `Crashday/user/mod_testing/`
@@ -35,4 +35,6 @@ Now launch Crashday, select _MODS_ and enable _mode development mode._
 
 > If you encounter any bug while testing your mod, or the game takes to long to load, try the _Disable workshop mods_ option. It will not load any workshop mods, but will still load testing mods.
 
-Now we are ready to play and test the mod! If you did everything correctly, after launching any mode you should have much lower gravity. Congratulations, your first mod is ready!
+Now we are ready to play and test the mod! 
+If you did everything correctly, after launching any mode you should have much lower gravity. 
+Congratulations, your first mod is ready!

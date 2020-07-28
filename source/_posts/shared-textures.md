@@ -2,9 +2,10 @@
 title: Shared Textures
 date: 2019-09-21T14:48:37.610Z
 updated: 2019-09-21T14:48:37.632Z
-toc: true
+toc: false
 category:
   - Documentation
+  - Textures
 ---
 Shared textures are textures that you can use in your model, without needing them in your mod's .cpk. Every texture that's located exactly in the `textures` folder, is considered a shared texture and can be used by any other mod. This includes the textures of all tiles, dynamics, pickups, wheels, drivers, etc.
 

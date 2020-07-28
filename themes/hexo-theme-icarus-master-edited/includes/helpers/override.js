@@ -27,7 +27,20 @@ module.exports = function (hexo) {
 
     hexo.extend.helper.register('_list_categories', function () {
         const $ = cheerio.load(this.list_categories({ depth: 2 }), { decodeEntities: false });
-        function traverse(root, list_posts) {
+
+        function mapOrder (array, order, key) {
+            array.sort( function (a, b) {
+                var A = a[key], B = b[key];
+                if (order.indexOf(A) < order.indexOf(B) || order.indexOf(A) === -1 || order.indexOf(B) === -1) {
+                    return -1;
+                    } else {
+                    return 1;
+                    }
+            });
+            return array;
+          };
+
+        function traverse(root, list_posts, depth) {
             const categories = [];
             root.find('> .category-list-item').each(function () {
                 const category = {
@@ -36,9 +49,8 @@ module.exports = function (hexo) {
                     count: $(this).find('> .category-list-count').text(),
                     display_posts: false
                 };
-                if(category.name == 'Documentation') list_posts = true;
                 if ($(this).find('> .category-list-child').length) {
-                    category['children'] = traverse($(this).find('> .category-list-child'), list_posts);
+                    category['children'] = traverse($(this).find('> .category-list-child'), list_posts, depth + 1);
                 }
                 else
                 {
@@ -46,9 +58,20 @@ module.exports = function (hexo) {
                 }
                 categories.push(category);
             });
+
+            if(depth == 0){
+                mapOrder(categories, ['Documentation', 'Tutorials', 'Misc'], 'name')
+            }
+            else if (depth == 1){
+                mapOrder(categories, ['Files', 'Textures', 'Other'], 'name')
+            }
+
             return categories;
         }
-        return traverse($('.category-list'), true);
+        m = traverse($('.category-list'), false, 0)
+        console.log("meme")
+        console.log(m)
+        return m;
     });
 
     hexo.extend.helper.register('_list_tags', function () {

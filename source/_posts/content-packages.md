@@ -5,6 +5,7 @@ updated: 2019-05-09T17:24:09.655Z
 toc: false
 category:
   - Documentation
+  - Files
 ---
 All CD:RE files and mods are stored inside .cpk files. These files are just .zip archives and contain all of the game's content. If you go to the `...\Crashday\data` folder you will find all of the game's .cpk content packages. Please note that you are not allowed to edit default game files and the game will crash if you try to edit them. For editing content you need to create a custom mod.
 
