@@ -14,7 +14,7 @@ With that out of the way, it should be noted that these tips will be more focuse
 
 ### **Layer types**
 
-These can be chosen by clicking *Wrench* icon *(a.k.a. Properties)* on the *Layers* window, while having your desired layer selected. Here is list of some of the most useful ones, and explaining why.
+These can be chosen by clicking *Wrench* icon *(a.k.a. Properties)* on the *Layers* window, while having your desired layer selected. They are best explained on their official page [here](https://www.getpaint.net/doc/latest/BlendModes.html), and it's probably best to look at it in Paint.net yourself for experimenting, but there's one mode that's universally used for all vanilla game liverys:
 
 **Multiply:** This, when added to an above layer, takes the colors of the layer below it, and multiplies/mixes them together, making the above layer a sort of mask. 
 
