@@ -7,7 +7,7 @@ category:
   - Documentation
   - Lore-Friendly
 ---
-Carlogos for default cars also have a consistant style to them that's art can be replicated. But what reoccuring features there are?
+Carlogos for default cars have a consistant style to them that's art can be replicated. But what reoccuring features there are?
 
 ![Left part: Default Carlogos, Right Part: Lore-Friendly mod carlogos](/media/carlogos_master.png "(for a transparent version, contact Freed8m#4667 on Discord)")
 
