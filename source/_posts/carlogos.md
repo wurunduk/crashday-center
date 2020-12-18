@@ -27,4 +27,4 @@ You can see some examples on the right side of the image, all of which tried som
 * The Fireburnz's only elaborates on this further, intentionally looking similiar to the Firespitter's logo, but with a still very fitting light blue as an accent color for the modelname.
 * The Trance-Mortar's tries something new in a different area, being shapes, as it uses a more elaborate, sort of text encapsulating graphic, intentionally showing similiarity to the Cube's logo, trying to create some continuity with the two cars.
 
-***This guide mainly shows the limits of these textures, but I ultimately encourage anybody to get familiar with the lore style behind it, and with enough creativity try and push the style a bit more for nice variety.***
+***This guide mainly shows the limits of these textures, but I ultimately encourage anybody to get familiar with the lore and style behind it, and with enough creativity try, and push the style a bit more, for nice variety.***
