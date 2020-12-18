@@ -2,7 +2,7 @@
 title: Carlogos
 date: 2020-12-18T13:14:42.706Z
 updated: 2020-12-18T13:14:43.526Z
-toc: true
+toc: false
 category:
   - Documentation
   - Lore-Friendly
