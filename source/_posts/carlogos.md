@@ -15,7 +15,8 @@ Carlogos for default cars have a consistant style to them that's art can be repl
 
 * The main car name always in white (except the Spectran because Crashday) and everything has a 1-2 pixel shadow offset.
 * You can also see the variety of fonts used, mainly that the main name's font often differs from the miscellaneous model names next to it (great examples are the Buster's and Bornbad's). 
-* For colors other then white you can also notice white outlines given to said shapes or letters, but only in some instances, like the Cube's RS or the Hunter's shape/box.
+* A variety of colors are used, with not that much consistancy between them, but they are always used for the model name, or at least part of it. Other colors, like blue don't actually appear for default cars, but for your creations, a tastefully choosen color can feel just as natural as vanilla logos do.
+* For colors other then white then *sometimes* you can also notice white outlines given to said shapes or letters, but only in some instances, like the Cube's RS or the Hunter's shape/box.
 * The scale and transform of the letters can also vary. Not only some text is marked in bold or italics, you can also see the V8 being much bigger on both cars it's displayed on, you can see the differing space between *Motors*'s letters on the Ironhorze, and the V12 being squashed down on the Incubator, it's played around with on every carlogo.
 * Lastly, you can also notice simple, small shapes on some of the logos, mainly the Cube's or Pickup's, and it's also used as background for other car's letters like the Hunter's and Apachee's logos. 
 
