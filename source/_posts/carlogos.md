@@ -13,7 +13,7 @@ Carlogos for default cars have a consistant style to them that's art can be repl
 
  **From that combined picture you can already see the consistancy shown in default carlogos:** 
 
-* The main car name always in white (except the Spectran because Crashday) and everything has a 1-2 pixel shadow offset.
+* The main car name is always in white (except the Spectran because Crashday) and everything has a 1-2 pixel shadow offset.
 * You can also see the variety of fonts used, mainly that the main name's font often differs from the miscellaneous model names next to it (great examples are the Buster's and Bornbad's). 
 * A variety of colors are used, with not that much consistancy between them, but they are always used for the model name, or at least part of it. Other colors, like blue don't actually appear for default cars, but for your creations, a tastefully choosen color can feel just as natural as vanilla logos do (good example is the Cube's RS, only car to use green).
 * For colors other then white then *sometimes* you can also notice white outlines given to said shapes or letters, but only in some instances, like the Cube's RS or the Hunter's shape/box.
