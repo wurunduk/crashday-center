@@ -40,7 +40,7 @@ For the demonstrations below, I took the Wildfire livery, made it fully white wi
 With some tweaking to Hue/Saturation I could find very close values the *"Wildfire"* livery used (RGB 254,133,13).\
 But be aware this method only works with certain colors, like blue or lime-ish colors, but usually tweaking the Lightness and Saturation after changing the Hue with Hue/Saturation, every color can work well.
 
-**The Alpha Channel and Masks**
+## **The Alpha Channel and Masks**
 
 To make most use of the method above and have parts of the car body paintable ingame, you will have to utilize Alpha Masks, but first, a little introduction to the Alpha Layer or Channel itself. 
 
@@ -52,26 +52,31 @@ Let's look at a simple example to visualize it:
 
 ![](/media/alpha-simpl1.png)
 
-We have this image I made as an alpha map. \
-The top part has a 0,0,0, fully Black, \
-a 50 Lightness, so 127,127,127 Grey,  \
-and a 255,255,255 White. \
-These will correspond to the Opacity values in an image it gets applied to, so the Black will be 0 Opacity a.k.a. fully transparent, Grey 127 Opacity, so half transparent, and White part 255 Opacity, so not transparent at all. The gradient part will just demonstrate it smoothly. \
-\
+We have this image I made as an alpha map. 
+
+The top part has a 0,0,0, fully Black,
+a 50 Lightness, so 127,127,127 Grey,  
+and a 255,255,255 White. 
+
+These will correspond to the Opacity values in an image it gets applied to, so the Black will be 0 Opacity a.k.a. fully transparent, Grey 127 Opacity, so half transparent, and White part 255 Opacity, so not transparent at all. The gradient part will just demonstrate it smoothly. 
+
 It will get applied to:
 
 ![](/media/alpha-simplcol1.png)
 
-This, which is the same image I copied to a Paint.net New Image. I added a Multiply layer above it, colored it red, to better see the results.\
-\
+This, which is the same image I copied to a Paint.net New Image. I added a Multiply layer above it, colored it red, to better see the results.
+
 This is where you'll locate the plugin after installation. You may not have all the tabs above it, but it will always be on the bottom.
 
 ![](/media/alpha-mask-loc.png)
 
-You can either put the alpha mask image to clipboard, or save it as .bmp, then you use the plugin on the texture.\
-If you have it on clipboard, you'll see it instantly, if not, you just need to open the Mask File in the Effect's settings like displayed below.\
-\
-You can see it exactly working like expected, the opacity gets changed according to the uniform RGB values in the black and white alpha mask image. \
+You can either put the alpha mask image to clipboard, or save it as .bmp, then you use the plugin on the texture.
+
+If you have it on clipboard, you'll see it instantly, if not, you just need to open the Mask File in the Effect's settings like displayed below.
+
+
+You can see it exactly working like expected, the opacity gets changed according to the uniform RGB values in the black and white alpha mask image. 
+
 Note that you can use even colored images as the alpha maps, but the plugin will always see it black and white, since the alpha layer can only work with greyscale colors. For this reason, if you are using a colored image as alpha mask for whatever reason, apply a Black and White from the Adjustments menu so you can see what you are using better.
 
 ![](/media/a-mask-in-progr.png)
