@@ -44,8 +44,8 @@ But be aware this method only works with certain colors, like blue or lime-ish c
 
 ## **The Alpha Channel and Masks**
 
-To make use of this section, you'll need the [Alpha Mask plugin](https://forums.getpaint.net/topic/1854-alpha-mask-import-plugin-20/), if you'll work in paint.net.\
-\
+To make use of this section, you'll need the [Alpha Mask plugin](https://forums.getpaint.net/topic/1854-alpha-mask-import-plugin-20/), if you'll work in paint.net.
+
 To make most use of the method above and have parts of the car body paintable ingame, you will have to utilize Alpha Masks, but first, a little introduction to the Alpha Layer or Channel itself. 
 
 The Alpha Channel is present in any image supporting transparency, and it basically defines how transparent parts of the image should be using the RGB values in the channel. While it can use any type of image, even colored ones as an alpha layer, the channel will always be greyscale when it's used as an Alpha Layer, so it's more practical to create the Alpha Masks in black and white, so you even see the exact opacity values easier thanks to the RGB values being the same.
