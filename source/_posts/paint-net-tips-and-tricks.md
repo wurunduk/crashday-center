@@ -6,13 +6,13 @@ toc: true
 category:
   - Tutorials
 ---
-### **Introduction**
+## **Introduction**
 
 Paint.net is a free program and relatively simple in terms of interface and UI compared to it's other 'rivals', like Gimp or Photoshop, while still featuring many tools and features, like layers and effects. Such effects and adjustments can still be expanded thanks to Paint.net's community based focus and customizable nature, with the help of plugins, some of which are very useful for modding this game. So overall, thanks to it's simplicity, it's recommended for beginners, and thanks to it's customizability it's very useful to more advanced modders aswell.  [Download here](https://www.getpaint.net/download.html)
 
 With that out of the way, it should be noted that these tips will be more focused for more novice users, who want to improve their work's quality and/or create mods in similiar quality to the vanilla assets (or even better).
 
-### **Layer types**
+## **Layer types**
 
 These can be chosen by clicking *Wrench* icon *(a.k.a. Properties)* on the *Layers* window, while having your desired layer selected. They are best explained on their official page [here](https://www.getpaint.net/doc/latest/BlendModes.html), and it's probably best to look at it in Paint.net yourself for experimenting, but there's one mode that's universally used for almost all vanilla game liverys:
 
