@@ -16,7 +16,8 @@ With that out of the way, it should be noted that these tips will be more focuse
 
 These can be chosen by clicking *Wrench* icon *(a.k.a. Properties)* on the *Layers* window, while having your desired layer selected. They are best explained on their official page [here](https://www.getpaint.net/doc/latest/BlendModes.html), and it's probably best to look at it in Paint.net yourself for experimenting, but there's one mode that's universally used for almost all vanilla game liverys:
 
-**Multiply:** This, when added to an above layer, takes the colors of the layer below it, and multiplies/mixes them together, making the above layer a sort of mask. 
+### **Multiply:** 
+This, when added to an above layer, takes the colors of the layer below it, and multiplies/mixes them together, making the above layer a sort of mask. 
 
 With *Normal* Blend Mode
 
@@ -30,7 +31,7 @@ This is very useful sort of 'baking' liverys onto an Ambient Occlusion baked bod
 
 Except one!
 
-**Color Burn:**
+### **Color Burn:**
 Works similiarly to ***Multiply,*** except in a way it takes the brightness values of the below layer, being body texture, and somehow applies it to the livery layer's hue in an amplified way. This is the way the Apachee's *"Wildfire"* livery was made.
 
 For the demonstrations below, I took the Wildfire livery, made it fully white with Hue/Saturation, and gave it an orange color with the [Color Filter](https://forums.getpaint.net/topic/18811-ed-harvey-effects-v-40-2012-02-13/) plugin I later tweaked.
