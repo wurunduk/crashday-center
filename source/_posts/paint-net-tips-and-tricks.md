@@ -26,22 +26,26 @@ With *Multiply* Blend Mode
 
 ![](/media/multipl_layer2.png "On *Mutiply* Blend Mode")
 
-This is very useful sort of 'baking' liverys onto an Ambient Occlusion baked body texture and if you want to replicate how vanilla game liverys look like, as they were probably made this exact way. \
-Except one!\
-\
-**Color Burn:**\
-Works similiarly to ***Multiply,*** except in a way it takes the brightness values of the below layer, being body texture, and somehow applies it to the livery layer's hue in an amplified way. This is the way the Apachee's *"Wildfire"* livery was made.\
+This is very useful sort of 'baking' liverys onto an Ambient Occlusion baked body texture and if you want to replicate how vanilla game liverys look like, as they were probably made this exact way. 
+
+Except one!
+
+**Color Burn:**
+Works similiarly to ***Multiply,*** except in a way it takes the brightness values of the below layer, being body texture, and somehow applies it to the livery layer's hue in an amplified way. This is the way the Apachee's *"Wildfire"* livery was made.
+
 For the demonstrations below, I took the Wildfire livery, made it fully white with Hue/Saturation, and gave it an orange color with the [Color Filter](https://forums.getpaint.net/topic/18811-ed-harvey-effects-v-40-2012-02-13/) plugin I later tweaked.
 
 ![This is the livery layer with Multiply](/media/wildfire-mulp.png)
 
 ![And this is with Color Burn](/media/wildfire-cb.png)
 
-With some tweaking to Hue/Saturation I could find very close values the *"Wildfire"* livery used (RGB 254,133,13).\
+With some tweaking to Hue/Saturation I could find very close values the *"Wildfire"* livery used (RGB 254,133,13).
 But be aware this method only works with certain colors, like blue or lime-ish colors, but usually tweaking the Lightness and Saturation after changing the Hue with Hue/Saturation, every color can work well.
 
 ## **The Alpha Channel and Masks**
 
+To make use of this section, you'll need the [Alpha Mask plugin](https://forums.getpaint.net/topic/1854-alpha-mask-import-plugin-20/), if you'll work in paint.net.\
+\
 To make most use of the method above and have parts of the car body paintable ingame, you will have to utilize Alpha Masks, but first, a little introduction to the Alpha Layer or Channel itself. 
 
 The Alpha Channel is present in any image supporting transparency, and it basically defines how transparent parts of the image should be using the RGB values in the channel. While it can use any type of image, even colored ones as an alpha layer, the channel will always be greyscale when it's used as an Alpha Layer, so it's more practical to create the Alpha Masks in black and white, so you even see the exact opacity values easier thanks to the RGB values being the same.
@@ -55,7 +59,7 @@ Let's look at a simple example to visualize it:
 We have this image I made as an alpha map. 
 
 The top part has a 0,0,0, fully Black,
-a 50 Lightness, so 127,127,127 Grey,  
+a 50 Lightness, so 127,127,127 Grey,\
 and a 255,255,255 White. 
 
 These will correspond to the Opacity values in an image it gets applied to, so the Black will be 0 Opacity a.k.a. fully transparent, Grey 127 Opacity, so half transparent, and White part 255 Opacity, so not transparent at all. The gradient part will just demonstrate it smoothly. 
@@ -74,7 +78,6 @@ You can either put the alpha mask image to clipboard, or save it as .bmp, then y
 
 If you have it on clipboard, you'll see it instantly, if not, you just need to open the Mask File in the Effect's settings like displayed below.
 
-
 You can see it exactly working like expected, the opacity gets changed according to the uniform RGB values in the black and white alpha mask image. 
 
 Note that you can use even colored images as the alpha maps, but the plugin will always see it black and white, since the alpha layer can only work with greyscale colors. For this reason, if you are using a colored image as alpha mask for whatever reason, apply a Black and White from the Adjustments menu so you can see what you are using better.
@@ -84,3 +87,17 @@ Note that you can use even colored images as the alpha maps, but the plugin will
 As for Settings go, you'll be using the Invert Mask option sometimes aswell, since you may mix up what black and white stands for occasionally, and this is an easy way to fix it without needing to go back to the original image.
 
 ![](/media/a-mask-invert.png)
+
+## Applying to liveries
+
+So how do you use this for liveries? Well, you can only get the body texture onto the livery by using the technique above, which includes flattening the layers, getting rid of the livery's transparency in the process, which means no paintable parts ingame.
+
+So to get around it, we are gonna use the Alpha Mask plugin, exactly like it's demonstrated above.
+
+ First, before you `Flatten` the layers, copy the livery to your clipboard, and paste it to a new paint.net window, which canvas's size is the same as the livery's. 
+
+Then, create a new layer, put it below the livery's layer, and color it fully, 000 Black. For the livery layer, open Hue/Saturation in the Adjustments panel, and put the Lightness slider all the way to the right, this will make it a 255, fully white color. After you `Flatten (Shift+Ctrl+F)` these layers, it will be the image that you'll use as an Alpha Mask, by either saving this image as a bitmap/`.bmp,` or copying it to your clipboard.
+
+To make use of it, proceed back to the livery's window, and provided you set the Layer Type to `Multiply`, you can `Flatten` it. Navigate to `Effects`, then down to `Alpha Mask`. If you saved the image, open the `.bmp` with `Browse...`, if you have it on your clipboard then just have `Paste From Clipboard` checked. You don't need to check any of the other options, unless you mixed up the colors in your alpha mask, in which case `Invert Mask`.
+
+And that's it. It's best used for final livery compiles, as it's a longer process then just simply previewing the livery in a non-paintable, but quick flattened way.
