@@ -59,7 +59,9 @@ Let's look at a simple example to visualize it:
 We have this image I made as an alpha map. 
 
 The top part has a 0,0,0, fully Black,
-a 50 Lightness, so 127,127,127 Grey,\
+
+a 50 Lightness, so 127,127,127 Grey,
+
 and a 255,255,255 White. 
 
 These will correspond to the Opacity values in an image it gets applied to, so the Black will be 0 Opacity a.k.a. fully transparent, Grey 127 Opacity, so half transparent, and White part 255 Opacity, so not transparent at all. The gradient part will just demonstrate it smoothly. 
@@ -84,11 +86,11 @@ Note that you can use even colored images as the alpha maps, but the plugin will
 
 ![](/media/a-mask-in-progr.png)
 
-As for Settings go, you'll be using the Invert Mask option sometimes aswell, since you may mix up what black and white stands for occasionally, and this is an easy way to fix it without needing to go back to the original image.
+As for Settings go, you'll be using the Invert Mask option sometimes aswell, since you could occasionally mix up what black and white stands for, and this is an easy way to fix it without needing to go back to the original image.
 
 ![](/media/a-mask-invert.png)
 
-## Applying to liveries
+### Applying Alpha Mask to liveries
 
 So how do you use this for liveries? Well, you can only get the body texture onto the livery by using the technique above, which includes flattening the layers, getting rid of the livery's transparency in the process, which means no paintable parts ingame.
 
