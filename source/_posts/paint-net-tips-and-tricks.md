@@ -16,7 +16,8 @@ With that out of the way, it should be noted that these tips will be more focuse
 
 These can be chosen by clicking *Wrench* icon *(a.k.a. Properties)* on the *Layers* window, while having your desired layer selected. They are best explained on their official page [here](https://www.getpaint.net/doc/latest/BlendModes.html), and it's probably best to look at it in Paint.net yourself for experimenting, but there's one mode that's universally used for almost all vanilla game liverys:
 
-### **Multiply** 
+### **Multiply**
+
 This, when added to an above layer, takes the colors of the layer below it, and multiplies/mixes them together, making the above layer a sort of mask. 
 
 With *Normal* Blend Mode
@@ -32,6 +33,7 @@ This is very useful sort of 'baking' liverys onto an Ambient Occlusion baked bod
 Except one!
 
 ### **Color Burn**
+
 Works similiarly to ***Multiply,*** except in a way it takes the brightness values of the below layer, being body texture, and somehow applies it to the livery layer's hue in an amplified way. This is the way the Apachee's *"Wildfire"* livery was made.
 
 For the demonstrations below, I took the Wildfire livery, made it fully white with Hue/Saturation, and gave it an orange color with the [Color Filter](https://forums.getpaint.net/topic/18811-ed-harvey-effects-v-40-2012-02-13/) plugin I later tweaked.
@@ -104,3 +106,19 @@ Then, create a new layer, put it below the livery's layer, and color it fully, 0
 To make use of it, proceed back to the livery's window, and provided you set the Layer Type to `Multiply`, you can `Flatten` it. Navigate to `Effects`, then down to `Alpha Mask`. If you saved the image, open the `.bmp` with `Browse...`, if you have it on your clipboard then just have `Paste From Clipboard` checked. You don't need to check any of the other options, unless you mixed up the colors in your alpha mask, in which case `Invert Mask`.
 
 And that's it. It's best used for final livery compiles, as it's a longer process then just simply previewing the livery in a non-paintable, but quick flattened way.
+
+### Specular Maps
+
+Almost all track piece textures use the alpha channel for a different purpose, being a sun specularity effect. 
+
+This image is the best demonstration of it's capabilities. It's the closest effect to a normal map you'll ever get in Crashday.
+
+![](/media/20200407220141_1.jpg)
+
+The more transparent parts of the texture are, the less specular reflection it gets from the sun's direction. The color and direction are defined in the ambiences' files seperately.
+
+![](/media/contgren_a.png)
+
+If you were to extract the Alpha Layer with a plugin effect like [Extract Channel](https://forums.getpaint.net/topic/18811-ed-harvey-effects-v-40-2012-02-13/), you can see that the darker a part, the less specularity it receives.
+
+Usually, for concrete and other simple materials, using a low contrast, much darkened version of the texture can easily suffice as a convincing specular map, but don't hesitate to take examples of vanilla textures' alpha layers.
