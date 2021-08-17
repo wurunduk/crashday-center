@@ -1,5 +1,5 @@
 ---
-title: Liveries realization and creation
+title: Livery realization and creation
 date: 2021-08-17T08:04:19.838Z
 updated: 2021-08-17T08:04:19.887Z
 toc: true
